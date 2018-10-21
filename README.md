@@ -25,7 +25,7 @@ foo();
 ```
 
 ### APIs
-```js
+```typescript
 // Throws if argument is `undefined` or `null`.
 function throwIfEmptyNoArray(argument: unknown, name: string): void;
 
