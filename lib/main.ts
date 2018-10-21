@@ -10,6 +10,7 @@ function panic(name: string) {
 }
 
 export function throwIfEmptyNoArray(argument: unknown, name: string) {
+  // tslint:disable-next-line
   if (argument === undefined || argument === null) {
     panic(name);
   }
