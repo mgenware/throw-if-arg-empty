@@ -14,7 +14,7 @@ yarn add throw-if-arg-empty
 
 ### Example
 ```js
-import { throwIfEmpty } from ('throw-if-arg-empty');
+import { throwIfEmpty } from 'throw-if-arg-empty';
 
 function foo(name) {
   throwIfEmpty(name, 'name');
