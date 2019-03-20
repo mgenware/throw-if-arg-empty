@@ -9,7 +9,7 @@ function panic(name: string) {
   throw new Error(`The argument "${name}" cannot be empty`);
 }
 
-export function throwIfEmptyNoArray(argument: unknown, name: string) {
+export function throwIfEmptyStrict(argument: unknown, name: string) {
   // tslint:disable-next-line
   if (argument === undefined || argument === null) {
     panic(name);
@@ -17,20 +17,20 @@ export function throwIfEmptyNoArray(argument: unknown, name: string) {
 }
 
 export function throwIfEmpty(argument: unknown, name: string) {
-  throwIfEmptyNoArray(argument, name);
+  throwIfEmptyStrict(argument, name);
   if (isEmptyArray(argument)) {
     panic(name);
   }
 }
 
-export function throwIfFalsyNoArray(argument: unknown, name: string) {
+export function throwIfFalsyStrict(argument: unknown, name: string) {
   if (!argument) {
     panic(name);
   }
 }
 
 export function throwIfFalsy(argument: unknown, name: string) {
-  throwIfFalsyNoArray(argument, name);
+  throwIfFalsyStrict(argument, name);
   if (isEmptyArray(argument)) {
     panic(name);
   }

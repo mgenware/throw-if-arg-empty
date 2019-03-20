@@ -1,7 +1,7 @@
 const {
-  throwIfEmptyNoArray,
+  throwIfEmptyStrict,
   throwIfEmpty,
-  throwIfFalsyNoArray,
+  throwIfFalsyStrict,
   throwIfFalsy,
 } = require('..');
 const MSG = 'The argument "name" cannot be empty';
@@ -18,9 +18,9 @@ function run(name, func, value, throws) {
 }
 
 function t(value, expected) {
-  run(`${value}: throwIfEmptyNoArray`, throwIfEmptyNoArray, value, expected[0]);
+  run(`${value}: throwIfEmptyStrict`, throwIfEmptyStrict, value, expected[0]);
   run(`${value}: throwIfEmpty`, throwIfEmpty, value, expected[1]);
-  run(`${value}: throwIfFalsyNoArray`, throwIfFalsyNoArray, value, expected[2]);
+  run(`${value}: throwIfFalsyStrict`, throwIfFalsyStrict, value, expected[2]);
   run(`${value}: throwIfFalsy`, throwIfFalsy, value, expected[3]);
 }
 

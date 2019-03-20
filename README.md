@@ -5,7 +5,7 @@
 [![npm version](https://img.shields.io/npm/v/throw-if-arg-empty.svg?style=flat-square)](https://npmjs.com/package/throw-if-arg-empty)
 [![Node.js Version](http://img.shields.io/node/v/throw-if-arg-empty.svg?style=flat-square)](https://nodejs.org/en/)
 
-Throw if an argument is empty. Dead simple, no dependencies.
+Throws if a specified argument is empty. Dead simple, no dependencies.
 
 ### Installation
 ```sh
@@ -14,7 +14,7 @@ yarn add throw-if-arg-empty
 
 ### Example
 ```js
-const { throwIfEmpty } = require('throw-if-arg-empty');
+import { throwIfEmpty } from ('throw-if-arg-empty');
 
 function foo(name) {
   throwIfEmpty(name, 'name');
@@ -27,13 +27,13 @@ foo();
 ### APIs
 ```typescript
 // Throws if argument is `undefined` or `null`.
-function throwIfEmptyNoArray(argument: unknown, name: string): void;
+function throwIfEmptyStrict(argument: unknown, name: string): void;
 
 // Throws if argument is `undefined`, `null` or an empty array.
 function throwIfEmpty(argument: unknown, name: string): void;
 
 // Throws if argument is falsy.
-function throwIfFalsyNoArray(argument: unknown, name: string): void;
+function throwIfFalsyStrict(argument: unknown, name: string): void;
 
 // Throws if argument is falsy or an empty array.
 function throwIfFalsy(argument: unknown, name: string): void;
