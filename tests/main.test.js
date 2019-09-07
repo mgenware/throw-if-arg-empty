@@ -4,15 +4,16 @@ const {
   throwIfFalsyStrict,
   throwIfFalsy,
 } = require('..');
-const MSG = 'The argument "name" cannot be empty';
+const assert = require('assert');
+const MSG = 'argument "name" cannot be empty';
 
 function run(name, func, value, throws) {
-  test(name, () => {
-    const head = expect(() => func(value, 'name'));
+  it(name, () => {
+    const body = () => func(value, 'name');
     if (throws) {
-      head.toThrow(MSG);
+      assert.throws(body, MSG);
     } else {
-      head.not.toThrow();
+      assert.doesNotThrow(body);
     }
   });
 }

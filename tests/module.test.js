@@ -1,7 +1,8 @@
 const fs = require('fs');
+const assert = require('assert');
 
 describe('require this module', () => {
-  test('Verify type definition files', () => {
-    expect(fs.statSync('./dist/main.d.ts').isFile()).toBeTruthy();
+  it('Verify type definition files', () => {
+    assert.equal(fs.statSync('./dist/main.d.ts').isFile(), true);
   });
 });
