@@ -1,6 +1,6 @@
 {
   "name": "throw-if-arg-empty",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Throw if an argument is empty",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
