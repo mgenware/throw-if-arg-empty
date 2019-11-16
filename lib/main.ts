@@ -3,9 +3,6 @@ function isEmptyArray(a: unknown): boolean {
 }
 
 function panic(name: string) {
-  if (!name) {
-    throw new Error('The argument cannot be empty');
-  }
   throw new Error(`The argument "${name}" cannot be empty`);
 }
 
