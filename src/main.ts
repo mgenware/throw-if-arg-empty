@@ -21,6 +21,7 @@ export function throwIfEmpty(argument: unknown, name: string) {
 }
 
 export function throwIfFalsyStrict(argument: unknown, name: string) {
+  // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
   if (!argument) {
     panic(name);
   }
