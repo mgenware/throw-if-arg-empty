@@ -6,30 +6,29 @@ function panic(name: string) {
   throw new Error(`The argument "${name}" cannot be empty`);
 }
 
-export function throwIfEmptyStrict(argument: unknown, name: string) {
-  // tslint:disable-next-line
-  if (argument === undefined || argument === null) {
+export function throwIfEmptyStrict<T>(val: T, name: string): asserts val is NonNullable<T> {
+  if (val === undefined || val === null) {
     panic(name);
   }
 }
 
-export function throwIfEmpty(argument: unknown, name: string) {
-  throwIfEmptyStrict(argument, name);
-  if (isEmptyArray(argument)) {
+export function throwIfEmpty<T>(val: T, name: string): asserts val is NonNullable<T> {
+  throwIfEmptyStrict(val, name);
+  if (isEmptyArray(val)) {
     panic(name);
   }
 }
 
-export function throwIfFalsyStrict(argument: unknown, name: string) {
+export function throwIfFalsyStrict<T>(val: T, name: string): asserts val {
   // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
-  if (!argument) {
+  if (!val) {
     panic(name);
   }
 }
 
-export function throwIfFalsy(argument: unknown, name: string) {
-  throwIfFalsyStrict(argument, name);
-  if (isEmptyArray(argument)) {
+export function throwIfFalsy<T>(val: T, name: string): asserts val {
+  throwIfFalsyStrict(val, name);
+  if (isEmptyArray(val)) {
     panic(name);
   }
 }
