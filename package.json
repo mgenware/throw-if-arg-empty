@@ -1,7 +1,7 @@
 {
   "name": "throw-if-arg-empty",
   "version": "3.0.0",
-  "description": "Throws if the specified argument is empty",
+  "description": "Throws if the specified argument is empty/nullable",
   "type": "module",
   "exports": "./dist/main.js",
   "types": "./dist/main.d.ts",

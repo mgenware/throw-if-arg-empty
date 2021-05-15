@@ -4,7 +4,7 @@
 [![npm version](https://img.shields.io/npm/v/throw-if-arg-empty.svg?style=flat-square)](https://npmjs.com/package/throw-if-arg-empty)
 [![Node.js Version](http://img.shields.io/node/v/throw-if-arg-empty.svg?style=flat-square)](https://nodejs.org/en/)
 
-Throws if the specified argument is empty.
+Throws if the specified argument is empty/nullable.
 
 ### Installation
 
