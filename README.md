@@ -9,7 +9,7 @@ Throws if the specified argument is empty/nullable.
 ### Installation
 
 ```sh
-yarn add throw-if-arg-empty
+npm i throw-if-arg-empty
 ```
 
 ### Example
